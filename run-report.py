@@ -14,7 +14,9 @@ def run_report():
     df["created_date"] = df.created_at.dt.date
 
     fig, ax = plt.subplots(
-        nrows=len(df.short_name.unique()), figsize=(8, 12), squeeze=False
+        nrows=len(df.short_name.unique()),
+        figsize=(8, len(df.short_name.unique()) * 4),
+        squeeze=False,
     )
     for i, product_name in enumerate(sorted(df.short_name.unique())):
         plt_df = (
