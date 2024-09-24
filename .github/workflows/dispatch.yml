@@ -1,0 +1,47 @@
+name: Workflow dispatch
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run:
+    name: Hello World
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello World
+        run: echo "Hello World"
+
+      - name: Environment Variables
+        env:
+          CURRENT_DATE: "2024-10-30"
+        run: |
+          echo "Today's date: $CURRENT_DATE"
+          echo "Today's date: $(date '+%Y-%m-%d')"
+          echo "Today's date: ${{ github.event.inputs.date }}"
+          echo "::notice::Github Context: https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs"
+
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: List Repository Content
+        run: ls -la
+
+      - name: List Environment Variables
+        run: env
+
+      - name: List processes
+        run: ps aux
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+      
+      - name: Run Python
+        run: python run-report.py
+        

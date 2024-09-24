@@ -1,0 +1,46 @@
+name: Scheduled Scraper (ubuntu-latest)
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *' # At 00:00
+
+jobs:
+  run:
+    name: "Run price_scraper"
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4 # checkout the repository content to github runner
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+          
+      - name: Install price_scraper
+        run: pip install git+https://github.com/andhrelja/price_scraper
+          
+      - name: Run price_scraper # run main.py
+        env:
+          LOG_LEVEL: "INFO"
+          INPUT_CONFIG_PATH: "${{ github.workspace }}/config.json"
+          DATA_DIR: "${{ github.workspace }}/data"
+        run: |
+          python -m price_scraper --input-config-path ${INPUT_CONFIG_PATH}
+          python run-report.py
+          
+      - name: Commit data
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git status
+          git add -A
+          git diff-index --quiet HEAD || (git commit -a -m "chore(auto): update report" --allow-empty)
+          
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.8.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main

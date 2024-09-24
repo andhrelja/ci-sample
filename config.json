@@ -1,0 +1,152 @@
+{
+    "products": [
+        {
+            "name": "Apple iPhone 16, 256GB, 6,1\"",
+            "short_name": "Apple iPhone 16",
+            "jobs": [
+                {
+                    "is_active": true,
+                    "service": "nabava",
+                    "protocol": "https://",
+                    "host": "nabava.net",
+                    "port": "",
+                    "prefix": "mobiteli/apple-iphone-16-cijena-256gb-61-616701131"
+                }
+            ]
+        },
+        {
+            "name": "Apple iPhone 16 Pro, 256GB, 6,3\"",
+            "short_name": "Apple iPhone 16 Pro",
+            "jobs": [
+                {
+                    "is_active": true,
+                    "service": "mobileshop",
+                    "protocol": "https://",
+                    "host": "mobileshop.eu",
+                    "port": "",
+                    "prefix": "hr/apple/mobiteli/iphone-16-pro-5g-dual-sim-256gb-8gb-ram-titanium/"
+                },
+                {
+                    "is_active": true,
+                    "service": "nabava",
+                    "protocol": "https://",
+                    "host": "nabava.net",
+                    "port": "",
+                    "prefix": "mobiteli/apple-iphone-16-pro-cijena-256gb-63-616701071"
+                }
+            ]
+        },
+        {
+            "name": "Apple iPhone 15 Pro, 256GB, 6,1\"",
+            "short_name": "Apple iPhone 15 Pro",
+            "jobs": [
+                {
+                    "is_active": false,
+                    "service": "mediaworld",
+                    "protocol": "https://",
+                    "host": "mediaworld.it",
+                    "port": "",
+                    "prefix": "it/product/_apple-iphone-15-pro-256gb-titanio-nero-188294.html",
+                    "headers": {
+                        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-US,en;q=0.9",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 Edg/118.0.2088.46"
+                    }
+                },
+                {
+                    "is_active": false,
+                    "service": "unieuro",
+                    "protocol": "https://",
+                    "host": "unieuro.it",
+                    "port": "",
+                    "prefix": "online/iPhone/iPhone-15-Pro-256GB-Titanio-Nero-pidAPLIPHONE15PRO256"
+                },
+                {
+                    "is_active": true,
+                    "service": "mobileshop",
+                    "protocol": "https://",
+                    "host": "mobileshop.eu",
+                    "port": "",
+                    "prefix": "hr/apple/mobiteli/iphone-16-pro-5g-dual-sim-256gb-8gb-ram-titanium/"
+                },
+                {
+                    "is_active": true,
+                    "service": "links",
+                    "protocol": "https://",
+                    "host": "links.hr",
+                    "port": "",
+                    "prefix": "hr/smartphone-apple-iphone-15-pro-6-1-8gb-256gb-ios-crni-010301641"
+                },
+                {
+                    "is_active": true,
+                    "service": "instar",
+                    "protocol": "https://",
+                    "host": "instar-informatika.hr",
+                    "port": "",
+                    "prefix": "mobitel-apple-iphone-15-pro-256gb-blue-titanium/213167/product/"
+                },
+                {
+                    "is_active": true,
+                    "service": "nabava",
+                    "protocol": "https://",
+                    "host": "nabava.net",
+                    "port": "",
+                    "prefix": "mobiteli/apple-iphone-15-pro-cijena-256gb-61-479495861"
+                }
+            ]
+        },
+        {
+            "name": "Samsung Galaxy S24, 256GB, 6.2",
+            "short_name": "Samsung Galaxy S24",
+            "jobs": [
+                {
+                    "is_active": false,
+                    "service": "mediaworld",
+                    "protocol": "https://",
+                    "host": "mediaworld.it",
+                    "port": "",
+                    "prefix": "it/product/_samsung-galaxy-s24-256gb-256-gb-gray-223924.html",
+                    "headers": {
+                        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-US,en;q=0.9",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 Edg/118.0.2088.46"
+                    }
+                },
+                {
+                    "is_active": true,
+                    "service": "links",
+                    "protocol": "https://",
+                    "host": "links.hr",
+                    "port": "",
+                    "prefix": "hr/smartphone-samsung-galaxy-s24-6-2-8gb-256gb-android-14-sivi-010301814"
+                },
+                {
+                    "is_active": true,
+                    "service": "instar",
+                    "protocol": "https://",
+                    "host": "instar-informatika.hr",
+                    "port": "",
+                    "prefix": "mobitel-samsung-galaxy-s24-62-120hz-8gb-ram-256gb-memorija-5g-o/226177/product/"
+                },
+                {
+                    "is_active": true,
+                    "service": "mikronis",
+                    "protocol": "https://",
+                    "host": "mikronis.hr",
+                    "port": "",
+                    "prefix": "Proizvod/samsung-galaxy-s24-6-2-8-256gb-amber-yellow-sm-s921bzygeue/41961"
+                },
+                {
+                    "is_active": true,
+                    "service": "nabava",
+                    "protocol": "https://",
+                    "host": "nabava.net",
+                    "port": "",
+                    "prefix": "mobiteli/samsung-galaxy-s24-cijena-256gb-62-517038971"
+                }
+            ]
+        }
+    ]
+}
