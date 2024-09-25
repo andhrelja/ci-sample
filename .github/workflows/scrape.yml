@@ -34,9 +34,8 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git status
-          git add -A
-          git diff-index --quiet HEAD || (git commit -a -m "chore(auto): update report" --allow-empty)
+          git config --local url."https://oauth2:${{ secrets.TOKEN_GITHUB }}@github.com".insteadOf https://github.com
+          git commit -a -m "chore(auto): update report" --allow-empty
           
       - name: Push changes
         uses: ad-m/github-push-action@v0.8.0
