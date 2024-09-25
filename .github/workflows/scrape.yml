@@ -1,4 +1,4 @@
-name: Scheduled Scraper (ubuntu-latest)
+name: Scheduled Scraper
 
 on:
   workflow_dispatch:
@@ -10,7 +10,6 @@ jobs:
     name: "Run price_scraper"
     runs-on: ubuntu-latest
     steps:
-
       - name: Checkout Repository
         uses: actions/checkout@v4 # checkout the repository content to github runner
 
@@ -42,5 +41,5 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@v0.8.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.TOKEN_GITHUB }}
           branch: main

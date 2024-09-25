@@ -17,7 +17,7 @@ jobs:
         run: |
           echo "Today's date: $CURRENT_DATE"
           echo "Today's date: $(date '+%Y-%m-%d')"
-          echo "Today's date: ${{ github.event.inputs.date }}"
+          echo "Today's date: ${{ github.event.repository.pushed_at }}"
           echo "::notice::Github Context: https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs"
 
       - name: Dump GitHub context
@@ -42,6 +42,8 @@ jobs:
         with:
           python-version: '3.12'
       
+      - name: Run PIP Install
+        run: pip install -r requirements.txt
+        
       - name: Run Python
         run: python run-report.py
-        
