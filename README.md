@@ -46,8 +46,7 @@ Nakon generiranja izvješća u koraku "Generate Report", je li ono ostalo dostup
 
     on:
       workflow_dispatch:
-      schedule:
-        - # ?
+      # schedule:
 
     jobs:
       run:
@@ -70,3 +69,4 @@ Nakon generiranja izvješća u koraku "Generate Report", je li ono ostalo dostup
 4. Napraviti novi korak naziva "Generate Report". U `run` sekciji koraka, pokrenuti Python skriptu `run-report.py`.
 5. Napraviti novi korak naziva "Commit Changes".
 6. Napraviti novi korak naziva "Push Changes", koristeći [ad-m/github-push-action](https://github.com/ad-m/github-push-action) (**hint**: dopustiti workflow-u ovlast "Write" nad GitHub repozitorijem).
+7. Konfigurirati `schedule` workflow-a tako da se on pokreće svaki dan u 00:00 UTC.
