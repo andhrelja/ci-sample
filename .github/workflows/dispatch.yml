@@ -25,6 +25,9 @@ jobs:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
 
+      - name: List Directory Content
+        run: ls -la
+      
       - name: Checkout Repository
         uses: actions/checkout@v4
 
