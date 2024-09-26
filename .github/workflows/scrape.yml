@@ -24,21 +24,20 @@ jobs:
       - name: Run price_scraper # run main.py
         env:
           LOG_LEVEL: "INFO"
-          INPUT_CONFIG_PATH: "${{ github.workspace }}/config.json"
-          DATA_DIR: "${{ github.workspace }}/data"
+          CONFIG_JSON_PATH: "${{ github.workspace }}/config.json"
+          REPOSITORY_IO_PATH: "${{ github.workspace }}/data"
         run: |
-          python -m price_scraper --input-config-path ${INPUT_CONFIG_PATH}
+          python -m price_scraper --config-json-path ${CONFIG_JSON_PATH}
           python run-report.py
           
       - name: Commit data
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git config --local url."https://oauth2:${{ secrets.TOKEN_GITHUB }}@github.com".insteadOf https://github.com
           git commit -a -m "chore(auto): update report" --allow-empty
           
       - name: Push changes
         uses: ad-m/github-push-action@v0.8.0
         with:
-          github_token: ${{ secrets.TOKEN_GITHUB }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: main
