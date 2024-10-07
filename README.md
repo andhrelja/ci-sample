@@ -2,6 +2,16 @@
 
 ![products-report](index.svg)
 
+## Postavljanje za rad
+
+1. Preuzeti komprimirani projekt i dekomprimirati ga na proizvoljno mjesto na računalu (npr. `~/ci-sample`)
+2. Navigirati na https://github.com/new i kreirati novi repozitorij s proizvoljnim nazivom (npr. `ci-sample`)
+3. Otvoriti terminal u direktoriju projekta i inicijalizirati Git repozitorij naredbom `git init`
+4. Postaviti GitHub repozitorij kao `origin` naredbom `git remote add origin https://github.com/<user-name-here>/<repo-name-here>.git`
+5. Postaviti `main` kao glavni branch naredbom `git branch -M main`
+6. Dodati promjene i napraviti prvi commit: `git add . && git commit -m "build: initial commit"`
+7. Pushati promjene na GitHub: `git push origin main`
+
 ## Zadaci za početak
 
 1. Napraviti GitHub Workflow naziva `.github/workflows/dispatch.yml`, sadržaja:
