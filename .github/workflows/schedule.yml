@@ -2,8 +2,7 @@ name: Scheduled Scraper
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 0 * * *' # At 00:00
+  # schedule:
 
 jobs:
   run:
