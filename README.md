@@ -4,7 +4,7 @@
 
 ## Postavljanje za rad
 
-1. [Preuzeti komprimirani projekt](https://github.com/andhrelja/ci-sample/archive/refs/tags/v1.0.1.zip) i dekomprimirati ga na proizvoljno mjesto na računalu (npr. `~/ci-sample`)
+1. [Preuzeti komprimirani projekt](https://github.com/andhrelja/ci-sample/archive/refs/tags/v1.0.2.zip) i dekomprimirati ga na proizvoljno mjesto na računalu (npr. `~/ci-sample`)
 2. Navigirati na https://github.com/new i kreirati novi repozitorij s proizvoljnim nazivom (npr. `ci-sample`)
 3. Otvoriti terminal u direktoriju projekta i inicijalizirati Git repozitorij naredbom `git init`
 4. Postaviti GitHub repozitorij kao `origin` naredbom `git remote add origin https://github.com/<user-name-here>/<repo-name-here>.git`
